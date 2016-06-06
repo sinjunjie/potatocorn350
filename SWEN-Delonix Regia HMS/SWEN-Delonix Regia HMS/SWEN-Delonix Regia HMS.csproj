@@ -65,12 +65,6 @@
     <Compile Include="RoomAvailability.Designer.cs">
       <DependentUpon>RoomAvailability.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StaffManagement.Designer.cs">
-      <DependentUpon>StaffManagement.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Housekeeping.resx">
       <DependentUpon>Housekeeping.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,9 +79,6 @@
     </Compile>
     <EmbeddedResource Include="RoomAvailability.resx">
       <DependentUpon>RoomAvailability.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StaffManagement.resx">
-      <DependentUpon>StaffManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="JunjieDBDataSet.xsc">
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
