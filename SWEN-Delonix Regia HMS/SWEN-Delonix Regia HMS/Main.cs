@@ -24,7 +24,9 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Housekeeping page = new Housekeeping();
+            this.Hide();
+            page.Show(this);
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -69,6 +69,22 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
         }
 
+        public void InsertStaff(int staffId, string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId)
+        {
+            cmd.CommandText = "INSERT INTO [dbo].[HotelStaff]([firstName],[lastName],[dateOfBirth],[bankAccountNumber],[staffAddress],[phoneNumber],[dutyId],[accountId]) VALUES (@firstName,@lastName,@dateOfBirth,@bankAccountNumber,@staffAddress,@phoneNumber,@dutyId,@accountId)";
+            cmd.Parameters.AddWithValue("@staffId", staffId);
+            cmd.Parameters.AddWithValue("@firstName", firstName);
+            cmd.Parameters.AddWithValue("@lastName", lastName);
+            cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
+            cmd.Parameters.AddWithValue("@bankAccountNumber", bankAccountNumber);
+            cmd.Parameters.AddWithValue("@staffAddress", staffAddress); 
+            cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+            cmd.Parameters.AddWithValue("@dutyId", dutyId);
+            cmd.Parameters.AddWithValue("@accountId", accountId);
+            cmd.ExecuteNonQuery();
+            
+        }
+
         public void DeleteStaff(int staffId)
         {
             cmd.CommandText = "DELETE FROM HotelStaff WHERE staffId=@staffId";
