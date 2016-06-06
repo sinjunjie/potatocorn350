@@ -45,7 +45,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
             return tempList;
         }
 
-        
+
         public void UpdateDuty(int dutyId, string toUpdate)
         {
             cmd.CommandText = "UPDATE Duty SET [dutyType] = @toUpdate WHERE dutyId=@dutyId";
@@ -75,10 +75,10 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Parameters.AddWithValue("@staffId", staffId);
 
             cmd.ExecuteNonQuery();
-            
+
         }
 
-      public List<Staff> GetStaffById(int staffId)
+        public List<Staff> GetStaffById(int staffId)
         {
             cmd.CommandText = "SELECT * FROM HotelStaff WHERE staffId=@staffId";
             cmd.Parameters.AddWithValue("@staffId", staffId);
@@ -110,5 +110,72 @@ namespace SWEN_Delonix_Regia_HMS.managers
             return tempList;
         }
 
+        public List<Guest> GetGuestById(int guestId)
+        {
+            cmd.CommandText = "SELECT * FROM Guest WHERE guestId=@guestId";
+            cmd.Parameters.AddWithValue("@guestId", guestId);
+
+            List<Guest> tempList = new List<Guest>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Guest d = new Guest()
+                {
+                    guestId = (int)dr[0],
+                    firstName = (string)dr[1],
+                    lastName = (string)dr[2],
+                    phoneNum = (int)dr[3],
+                    email = (string)dr[4],
+                    guestAddress = (string)dr[5],
+                    country = (string)dr[6],
+
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
+        }
+        public void UpdateGuest(int guestId, string firstName, string lastName, int phoneNum, string email, string guestAddress, string country)
+        {
+            cmd.CommandText = "UPDATE [dbo].[Guest] SET [firstName] = @firstName, [lastName] = @lastName,[phoneNum] = @phoneNum,[email] = @email,[guestAddress] = @guestAddress ,[country] = @country WHERE guestId = @guestId";
+            cmd.Parameters.AddWithValue("@guestId", guestId);
+            cmd.Parameters.AddWithValue("@firstName", firstName);
+            cmd.Parameters.AddWithValue("@lastName", lastName);
+            cmd.Parameters.AddWithValue("@phoneNum", phoneNum);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@guestAddress", guestAddress);
+            cmd.Parameters.AddWithValue("@country", country);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+        }
+        public void InsertGuest(string firstName, string lastName, int phoneNum, string email, string guestAddress, string country)
+        {
+            cmd.CommandText = "INSERT INTO [dbo].[Guest]([firstName],[lastName],[phoneNum],[email],[guestAddress],[country]) VALUES (@firstName,@lastName,@phoneNum,@email,@guestAddress,@country)";
+            cmd.Parameters.AddWithValue("@firstName", firstName);
+            cmd.Parameters.AddWithValue("@lastName", lastName);
+            cmd.Parameters.AddWithValue("@phoneNum", phoneNum);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@guestAddress", guestAddress);
+            cmd.Parameters.AddWithValue("@country", country);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void DeleteGuest(int guestId)
+        {
+            cmd.CommandText = "DELETE FROM Guest WHERE guestId=@guestId";
+            cmd.Parameters.AddWithValue("@guestId", guestId);
+
+            cmd.ExecuteNonQuery();
+
+        }
     }
 }

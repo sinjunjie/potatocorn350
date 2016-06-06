@@ -16,7 +16,7 @@ namespace SWEN_Delonix_Regia_HMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Housekeeping());
+            Application.Run(new Booking());
         }
     }
 }
