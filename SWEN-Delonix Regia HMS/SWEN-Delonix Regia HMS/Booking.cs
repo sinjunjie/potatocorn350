@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SWEN_Delonix_Regia_HMS
 {
-    public partial class Form1 : Form
+    public partial class Booking : Form
     {
-        public Form1()
+        public Booking()
         {
             InitializeComponent();
         }
