@@ -54,13 +54,18 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
         }
 
-        public void UpdateStaff(int staffId, string firstName, string lastName)
+        public void UpdateStaff(int staffId, string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId )
         {
-            cmd.CommandText = "UPDATE HotelStaff SET [firstName] = @firstName,[lastName] = @lastName  WHERE staffId=@staffId";
+            cmd.CommandText = "UPDATE HotelStaff SET [firstName] = @firstName,[lastName] = @lastName,[dateOfBirth] = @dateOfBirth,[bankAccountNumber] = @bankAccountNumber,[staffAddress] = @staffAddress,[phoneNumber] = @phoneNumber, [dutyId] = @dutyId, [accountId] = @accountId  WHERE staffId=@staffId";
             cmd.Parameters.AddWithValue("@staffId", staffId);
             cmd.Parameters.AddWithValue("@firstName", firstName);
-
             cmd.Parameters.AddWithValue("@lastName", lastName);
+            cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
+            cmd.Parameters.AddWithValue("@bankAccountNumber", bankAccountNumber);
+            cmd.Parameters.AddWithValue("@staffAddress", staffAddress); 
+            cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+            cmd.Parameters.AddWithValue("@dutyId", dutyId);
+            cmd.Parameters.AddWithValue("@accountId", accountId);
             cmd.ExecuteNonQuery();
         }
 
