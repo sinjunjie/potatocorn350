@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SWEN_Delonix_Regia_HMS
 {
-    public partial class Form1 : Form
+    public partial class Staff_management_module : Form
     {
-        public Form1()
+        public Staff_management_module()
         {
             InitializeComponent();
         }
