@@ -24,5 +24,10 @@ namespace SWEN_Delonix_Regia_HMS
             manager.CreateAccount(textBox2.Text, textBox3.Text, Boolean.Parse(comboBox1.Text));
             MessageBox.Show("Details has been created!");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

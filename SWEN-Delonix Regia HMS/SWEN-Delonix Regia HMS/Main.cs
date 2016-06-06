@@ -19,7 +19,9 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Useraccount_and_login_creation page = new Useraccount_and_login_creation();
+            this.Hide();
+            page.Show(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
