@@ -177,5 +177,16 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
 
         }
+
+        public void CreateAccount(string username, string password, Boolean isAdmin)
+        {
+            cmd.CommandText = "INSERT INTO [dbo].[Account]([username],[password],[isAdmin]) VALUES (@username,@password,@isAdmin)";
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@isAdmin", isAdmin);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
