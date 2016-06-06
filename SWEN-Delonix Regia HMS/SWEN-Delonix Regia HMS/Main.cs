@@ -35,5 +35,12 @@ namespace SWEN_Delonix_Regia_HMS
             this.Hide();
             page.Show(this);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RoomAvailability page = new RoomAvailability();
+            this.Hide();
+            page.Show(this);
+        }
     }
 }
