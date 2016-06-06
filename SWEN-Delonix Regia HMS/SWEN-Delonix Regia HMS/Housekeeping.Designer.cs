@@ -43,7 +43,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tbxFirstName = new System.Windows.Forms.TextBox();
-            this.tbxDOB = new System.Windows.Forms.TextBox();
             this.tbxLastName = new System.Windows.Forms.TextBox();
             this.tbxBankAcc = new System.Windows.Forms.TextBox();
             this.tbxStaffAdd = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.tbxDutyId = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button2
@@ -186,13 +186,6 @@
             this.tbxFirstName.Size = new System.Drawing.Size(149, 20);
             this.tbxFirstName.TabIndex = 21;
             // 
-            // tbxDOB
-            // 
-            this.tbxDOB.Location = new System.Drawing.Point(82, 108);
-            this.tbxDOB.Name = "tbxDOB";
-            this.tbxDOB.Size = new System.Drawing.Size(149, 20);
-            this.tbxDOB.TabIndex = 22;
-            // 
             // tbxLastName
             // 
             this.tbxLastName.Location = new System.Drawing.Point(82, 71);
@@ -237,7 +230,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(299, 108);
+            this.button1.Location = new System.Drawing.Point(299, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 29;
@@ -246,18 +239,26 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(317, 60);
+            this.button4.Location = new System.Drawing.Point(299, 41);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 30;
             this.button4.Text = "Create";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(86, 105);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 31;
+            // 
             // Housekeeping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 358);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxDutyId);
@@ -266,7 +267,6 @@
             this.Controls.Add(this.tbxStaffAdd);
             this.Controls.Add(this.tbxBankAcc);
             this.Controls.Add(this.tbxLastName);
-            this.Controls.Add(this.tbxDOB);
             this.Controls.Add(this.tbxFirstName);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
@@ -307,7 +307,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbxFirstName;
-        private System.Windows.Forms.TextBox tbxDOB;
         private System.Windows.Forms.TextBox tbxLastName;
         private System.Windows.Forms.TextBox tbxBankAcc;
         private System.Windows.Forms.TextBox tbxStaffAdd;
@@ -316,6 +315,7 @@
         private System.Windows.Forms.TextBox tbxDutyId;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
 
     }

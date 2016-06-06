@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SWEN_Delonix_Regia_HMS.managers;
+using SWEN_Delonix_Regia_HMS.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,49 +19,31 @@ namespace SWEN_Delonix_Regia_HMS
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int guestId = Convert.ToInt32(textBox1.Text);
+            List<Guest> guestList = new DBManager().GetGuestById(guestId);
+            Guest myGuest = guestList[0];
+            textBox2.Text = myGuest.firstName;
+            tbLastName.Text = myGuest.lastName;
+            textBox4.Text = Convert.ToString(myGuest.phoneNum);
+            tbEmail.Text = myGuest.email;
+            textBox6.Text = myGuest.guestAddress;
+            textBox7.Text = myGuest.country;
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            DBManager manager = new DBManager();
+            manager.UpdateGuest(Convert.ToInt32(textBox1.Text), textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
+            MessageBox.Show("Details has been saved!");
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            DBManager manager = new DBManager();
+            manager.InsertGuest(textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
+            MessageBox.Show("Details has been created!");
         }
     }
 }
