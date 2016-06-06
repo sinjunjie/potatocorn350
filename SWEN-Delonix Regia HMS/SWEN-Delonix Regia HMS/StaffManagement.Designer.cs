@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Staff_management_module
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1013, 326);
+            this.Name = "Staff_management_module";
             this.Text = "Staff_management_module";
+            this.Load += new System.EventHandler(this.Staff_management_module_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

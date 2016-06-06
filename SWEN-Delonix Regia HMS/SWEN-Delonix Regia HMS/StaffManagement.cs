@@ -16,5 +16,10 @@ namespace SWEN_Delonix_Regia_HMS
         {
             InitializeComponent();
         }
+
+        private void Staff_management_module_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
