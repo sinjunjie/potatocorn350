@@ -16,5 +16,12 @@ namespace SWEN_Delonix_Regia_HMS
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Main page = new Main();
+            this.Hide();
+            page.Show(this);
+        }
     }
 }
