@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SWEN_Delonix_Regia_HMS.managers;
+using SWEN_Delonix_Regia_HMS.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,21 @@ namespace SWEN_Delonix_Regia_HMS
         {
             InitializeComponent();
         }
+
+        private void Housekeeping_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new DBManager().UpdateStaff(2,textBox1.Text, textBox2.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new DBManager().DeleteStaff(Convert.ToInt32(textBox3.Text));
+        }
+
     }
 }
