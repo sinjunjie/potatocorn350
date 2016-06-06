@@ -86,6 +86,9 @@
     <EmbeddedResource Include="RoomAvailability.resx">
       <DependentUpon>RoomAvailability.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffManagement.resx">
+      <DependentUpon>StaffManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="JunjieDBDataSet.xsc">
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
     </None>

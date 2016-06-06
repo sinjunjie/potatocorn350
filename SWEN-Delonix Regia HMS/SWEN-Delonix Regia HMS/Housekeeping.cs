@@ -26,12 +26,16 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new DBManager().UpdateStaff(2,textBox1.Text, textBox2.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             new DBManager().DeleteStaff(Convert.ToInt32(textBox3.Text));
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
