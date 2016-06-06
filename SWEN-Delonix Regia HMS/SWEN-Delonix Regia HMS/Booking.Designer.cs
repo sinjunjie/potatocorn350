@@ -121,6 +121,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(107, 135);
+            this.textBox2.MaxLength = 100;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 7;
@@ -128,6 +129,7 @@
             // tbLastName
             // 
             this.tbLastName.Location = new System.Drawing.Point(107, 169);
+            this.tbLastName.MaxLength = 100;
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 8;
@@ -135,6 +137,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(107, 207);
+            this.textBox4.MaxLength = 20;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 9;
@@ -142,6 +145,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(107, 244);
+            this.tbEmail.MaxLength = 50;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(188, 20);
             this.tbEmail.TabIndex = 10;
@@ -158,6 +162,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(107, 282);
+            this.textBox6.MaxLength = 100;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(188, 20);
             this.textBox6.TabIndex = 12;
@@ -165,6 +170,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(107, 317);
+            this.textBox7.MaxLength = 50;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 13;
