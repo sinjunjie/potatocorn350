@@ -1,4 +1,5 @@
 ﻿using SWEN_Delonix_Regia_HMS.managers;
+using SWEN_Delonix_Regia_HMS.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,26 @@ namespace SWEN_Delonix_Regia_HMS
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int accountId = Convert.ToInt32(textBox1.Text);
+            List<Account> accountList = new DBManager().GetAccountById(accountId);
+            Account myAccount = accountList[0];
+            textBox2.Text = myAccount.username;
+            textBox3.Text = myAccount.password;
+            comboBox1.Text = Convert.ToString(myAccount.isAdmin);
         }
     }
 }

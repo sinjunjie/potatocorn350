@@ -188,5 +188,32 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        public List<Account> GetAccountById(int accountId)
+        {
+            cmd.CommandText = "SELECT * FROM Account WHERE accountId=@accountId";
+            cmd.Parameters.AddWithValue("@accountId", accountId);
+
+            List<Account> tempList = new List<Account>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Account d = new Account()
+                {
+                    accountId = (int)dr[0],
+                    username = (string)dr[1],
+                    password = (string)dr[2],
+                    isAdmin = (Boolean)dr[3],
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
+        }
     }
 }
