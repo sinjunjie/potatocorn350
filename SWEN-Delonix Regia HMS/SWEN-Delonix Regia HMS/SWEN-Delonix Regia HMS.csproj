@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="JunjieDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +127,7 @@
     <None Include="JunjieDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>JunjieDBDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="JunjieDBDataSet.xss">
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>

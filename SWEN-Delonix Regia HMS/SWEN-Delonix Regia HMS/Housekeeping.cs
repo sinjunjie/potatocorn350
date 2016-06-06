@@ -22,7 +22,6 @@ namespace SWEN_Delonix_Regia_HMS
         private void Housekeeping_Load(object sender, EventArgs e)
         {
            List<Duty> dutyList =  new DBManager().GetAllDuties();
-           label1.Text = dutyList[0].dutyType;
         }
 
         private void button1_Click(object sender, EventArgs e)

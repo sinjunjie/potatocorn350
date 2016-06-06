@@ -45,5 +45,22 @@ namespace SWEN_Delonix_Regia_HMS
             manager.InsertGuest(textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
             MessageBox.Show("Details has been created!");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Main page = new Main();
+            this.Hide();
+            page.Show(this);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
