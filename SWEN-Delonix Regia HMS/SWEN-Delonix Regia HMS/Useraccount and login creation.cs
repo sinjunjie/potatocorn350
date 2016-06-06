@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWEN_Delonix_Regia_HMS.managers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace SWEN_Delonix_Regia_HMS
         public Useraccount_and_login_creation()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DBManager manager = new DBManager();
+            manager.CreateAccount(textBox2.Text, textBox3.Text, Boolean.Parse(comboBox1.Text));
+            MessageBox.Show("Details has been created!");
         }
     }
 }

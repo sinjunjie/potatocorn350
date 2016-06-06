@@ -62,6 +62,7 @@
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="managers\DBManager.cs" />
+    <Compile Include="model\Account.cs" />
     <Compile Include="model\Duty.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Staff.cs" />
