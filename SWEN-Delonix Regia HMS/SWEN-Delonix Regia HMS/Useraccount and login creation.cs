@@ -50,5 +50,12 @@ namespace SWEN_Delonix_Regia_HMS
             textBox3.Text = myAccount.password;
             comboBox1.Text = Convert.ToString(myAccount.isAdmin);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DBManager manager = new DBManager();
+            manager.UpdateAccount(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, Boolean.Parse(comboBox1.Text));
+            MessageBox.Show("Details has been saved!");
+        }
     }
 }

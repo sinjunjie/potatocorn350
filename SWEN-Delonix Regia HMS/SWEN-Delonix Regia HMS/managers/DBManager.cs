@@ -215,5 +215,18 @@ namespace SWEN_Delonix_Regia_HMS.managers
 
             return tempList;
         }
+
+        public void UpdateAccount(int accountId, string username, string password, Boolean isAdmin)
+        {
+            cmd.CommandText = "UPDATE [dbo].[Account] SET [username] = @username, [password] = @password,[isAdmin]= @isAdmin";
+            cmd.Parameters.AddWithValue("@accountId", accountId);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@isAdmin", isAdmin);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
     }
 }
