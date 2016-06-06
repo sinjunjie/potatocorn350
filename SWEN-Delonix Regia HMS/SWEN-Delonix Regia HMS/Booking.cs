@@ -52,5 +52,15 @@ namespace SWEN_Delonix_Regia_HMS
             this.Hide();
             page.Show(this);
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
