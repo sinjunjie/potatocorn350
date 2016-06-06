@@ -70,7 +70,39 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Parameters.AddWithValue("@staffId", staffId);
 
             cmd.ExecuteNonQuery();
-            //secks
+            
+        }
+
+      public List<Staff> GetStaffById(int staffId)
+        {
+            cmd.CommandText = "SELECT * FROM HotelStaff WHERE staffId=@staffId";
+            cmd.Parameters.AddWithValue("@staffId", staffId);
+
+            List<Staff> tempList = new List<Staff>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Staff d = new Staff()
+                {
+                    staffId = (int)dr[0],
+                    firstName = (string)dr[1],
+                    lastName = (string)dr[2],
+                    dateOfBirth = (DateTime)dr[3],
+                    bankAccountNumber = (string)dr[4],
+                    staffAddress = (string)dr[5],
+                    phoneNumber = (int)dr[6],
+                    dutyId = (int)dr[7],
+                    accountId = (int)dr[8],
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
         }
 
     }

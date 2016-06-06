@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="managers\DBManager.cs" />
     <Compile Include="model\Duty.cs" />
+    <Compile Include="model\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomAvailability.cs">
