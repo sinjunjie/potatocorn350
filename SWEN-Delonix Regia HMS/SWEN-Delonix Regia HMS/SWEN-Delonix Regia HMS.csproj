@@ -56,11 +56,6 @@
     <Compile Include="Housekeeping.Designer.cs">
       <DependentUpon>Housekeeping.cs</DependentUpon>
     </Compile>
-    <Compile Include="JunjieDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="JunjieDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -659,8 +659,6 @@ namespace SWEN_Delonix_Regia_HMS {
             
             private global::System.Data.DataColumn columnroomType;
             
-            private global::System.Data.DataColumn columnroomId;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RoomDataTable() {
@@ -704,14 +702,6 @@ namespace SWEN_Delonix_Regia_HMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn roomIdColumn {
-                get {
-                    return this.columnroomId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -750,18 +740,10 @@ namespace SWEN_Delonix_Regia_HMS {
             public RoomRow AddRoomRow(string roomType) {
                 RoomRow rowRoomRow = ((RoomRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        roomType,
-                        null};
+                        roomType};
                 rowRoomRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoomRow);
                 return rowRoomRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RoomRow FindByroomId(int roomId) {
-                return ((RoomRow)(this.Rows.Find(new object[] {
-                            roomId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -782,7 +764,6 @@ namespace SWEN_Delonix_Regia_HMS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnroomType = base.Columns["roomType"];
-                this.columnroomId = base.Columns["roomId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -790,18 +771,8 @@ namespace SWEN_Delonix_Regia_HMS {
             private void InitClass() {
                 this.columnroomType = new global::System.Data.DataColumn("roomType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnroomType);
-                this.columnroomId = new global::System.Data.DataColumn("roomId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnroomId);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnroomId}, true));
                 this.columnroomType.AllowDBNull = false;
                 this.columnroomType.MaxLength = 100;
-                this.columnroomId.AutoIncrement = true;
-                this.columnroomId.AutoIncrementSeed = -1;
-                this.columnroomId.AutoIncrementStep = -1;
-                this.columnroomId.AllowDBNull = false;
-                this.columnroomId.ReadOnly = true;
-                this.columnroomId.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1042,17 +1013,6 @@ namespace SWEN_Delonix_Regia_HMS {
                 }
                 set {
                     this[this.tableRoom.roomTypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int roomId {
-                get {
-                    return ((int)(this[this.tableRoom.roomIdColumn]));
-                }
-                set {
-                    this[this.tableRoom.roomIdColumn] = value;
                 }
             }
         }
@@ -1430,25 +1390,7 @@ WHERE (HotelStaff.staffId = @staffId)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Room";
             tableMapping.ColumnMappings.Add("roomType", "roomType");
-            tableMapping.ColumnMappings.Add("roomId", "roomId");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Room] WHERE (([roomType] = @Original_roomType) AND ([roomId] = @Orig" +
-                "inal_roomId))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Room] SET [roomType] = @roomType WHERE (([roomType] = @Original_roomType)" +
-                " AND ([roomId] = @Original_roomId));\r\nSELECT roomType, roomId FROM Room WHERE (r" +
-                "oomId = @roomId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@roomType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_roomId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "roomId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@roomId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "roomId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1464,7 +1406,7 @@ WHERE (HotelStaff.staffId = @staffId)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        roomType, roomId\r\nFROM            Room";
+            this._commandCollection[0].CommandText = "SELECT        DISTINCT roomType\r\nFROM            Room";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1491,106 +1433,6 @@ WHERE (HotelStaff.staffId = @staffId)";
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(JunjieDBDataSet.RoomDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(JunjieDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Room");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_roomType, int Original_roomId) {
-            if ((Original_roomType == null)) {
-                throw new global::System.ArgumentNullException("Original_roomType");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_roomType));
-            }
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_roomId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string roomType, string Original_roomType, int Original_roomId, int roomId) {
-            if ((roomType == null)) {
-                throw new global::System.ArgumentNullException("roomType");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(roomType));
-            }
-            if ((Original_roomType == null)) {
-                throw new global::System.ArgumentNullException("Original_roomType");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Original_roomType));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_roomId));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(roomId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string roomType, string Original_roomType, int Original_roomId) {
-            return this.Update(roomType, Original_roomType, Original_roomId, Original_roomId);
-        }
     }
     
     /// <summary>
@@ -1605,8 +1447,6 @@ WHERE (HotelStaff.staffId = @staffId)";
         
         private UpdateOrderOption _updateOrder;
         
-        private RoomTableAdapter _roomTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1619,20 +1459,6 @@ WHERE (HotelStaff.staffId = @staffId)";
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public RoomTableAdapter RoomTableAdapter {
-            get {
-                return this._roomTableAdapter;
-            }
-            set {
-                this._roomTableAdapter = value;
             }
         }
         
@@ -1655,10 +1481,6 @@ WHERE (HotelStaff.staffId = @staffId)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._roomTableAdapter != null) 
-                            && (this._roomTableAdapter.Connection != null))) {
-                    return this._roomTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1672,9 +1494,6 @@ WHERE (HotelStaff.staffId = @staffId)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._roomTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1686,15 +1505,6 @@ WHERE (HotelStaff.staffId = @staffId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(JunjieDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1705,14 +1515,6 @@ WHERE (HotelStaff.staffId = @staffId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(JunjieDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1723,14 +1525,6 @@ WHERE (HotelStaff.staffId = @staffId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(JunjieDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._roomTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Room.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._roomTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1770,11 +1564,6 @@ WHERE (HotelStaff.staffId = @staffId)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._roomTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._roomTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1807,15 +1596,6 @@ WHERE (HotelStaff.staffId = @staffId)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._roomTableAdapter != null)) {
-                    revertConnections.Add(this._roomTableAdapter, this._roomTableAdapter.Connection);
-                    this._roomTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._roomTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._roomTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._roomTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._roomTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1873,10 +1653,6 @@ WHERE (HotelStaff.staffId = @staffId)";
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._roomTableAdapter != null)) {
-                    this._roomTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._roomTableAdapter]));
-                    this._roomTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

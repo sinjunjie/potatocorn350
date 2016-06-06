@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,8 +61,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junjieDBDataSet = new SWEN_Delonix_Regia_HMS.JunjieDBDataSet();
+            this.roomTableAdapter = new SWEN_Delonix_Regia_HMS.JunjieDBDataSetTableAdapters.RoomTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junjieDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -332,17 +338,35 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(558, 123);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 13);
+            this.label14.Size = new System.Drawing.Size(65, 13);
             this.label14.TabIndex = 38;
-            this.label14.Text = "Check-out Date:";
+            this.label14.Text = "Room Type:";
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.roomBindingSource;
+            this.comboBox1.DisplayMember = "roomType";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(680, 123);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 39;
+            this.comboBox1.ValueMember = "roomType";
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.junjieDBDataSet;
+            // 
+            // junjieDBDataSet
+            // 
+            this.junjieDBDataSet.DataSetName = "JunjieDBDataSet";
+            this.junjieDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
             // 
             // Booking
             // 
@@ -383,8 +407,11 @@
             this.Controls.Add(this.label1);
             this.Name = "Booking";
             this.Text = "Booking";
+            this.Load += new System.EventHandler(this.Booking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junjieDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,6 +451,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox1;
+        private JunjieDBDataSet junjieDBDataSet;
+        private System.Windows.Forms.BindingSource roomBindingSource;
+        private JunjieDBDataSetTableAdapters.RoomTableAdapter roomTableAdapter;
 
     }
 }
