@@ -22,11 +22,11 @@ namespace SWEN_Delonix_Regia_HMS
         private void Housekeeping_Load(object sender, EventArgs e)
         {
            List<Duty> dutyList =  new DBManager().GetAllDuties();
-         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,25 +34,18 @@ namespace SWEN_Delonix_Regia_HMS
             new DBManager().DeleteStaff(Convert.ToInt32(textBox3.Text));
         }
 
-        private void btnRetrieve_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
            List<Staff>sl = new DBManager().GetStaffById(Convert.ToInt32(textBox4.Text));
-           tbxAccId.Text = sl[0].accountId.ToString();
-           tbxFirstName.Text = sl[0].firstName;
-           tbxLastName.Text = sl[0].lastName;
-           dateTimePicker1.Text = sl[0].dateOfBirth.ToLongDateString();
-           tbxBankAcc.Text = sl[0].bankAccountNumber.ToString();
-           tbxStaffAdd.Text = sl[0].staffAddress;
-           tbxDutyId.Text = sl[0].dutyId.ToString();
-           tbxPhoneNum.Text = sl[0].phoneNumber.ToString();
+           label2.Text = sl[0].accountId.ToString();
+           label3.Text = sl[0].firstName;
+           label4.Text = sl[0].lastName;
+           label5.Text = sl[0].dateOfBirth.ToLongDateString();
+           label6.Text = sl[0].bankAccountNumber.ToString();
+           label7.Text = sl[0].staffAddress;
+           label8.Text = sl[0].dutyId.ToString();
+           label9.Text = sl[0].staffId.ToString();
 
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            DBManager managerCreate = new DBManager();
-            managerCreate.InsertStaff(Convert.ToInt32(textBox4.Text), tbxFirstName.Text, tbxLastName.Text, dateTimePicker1.Value, tbxBankAcc.Text, tbxStaffAdd.Text,  Convert.ToInt32(tbxPhoneNum.Text),Convert.ToInt32(tbxDutyId.Text),Convert.ToInt32(tbxAccId.Text) );
-            MessageBox.Show("Details has been created!");
         }
 
     }

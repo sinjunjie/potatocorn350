@@ -34,6 +34,23 @@ WHERE (HotelStaff.staffId = @staffId)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RoomTableAdapter" GeneratorDataComponentClassName="RoomTableAdapter" Name="Room" UserDataComponentName="RoomTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JunjieDBConnectionString (Settings)" DbObjectName="JunjieDB.dbo.Room" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        DISTINCT roomType
+FROM            Room</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="roomType" DataSetColumn="roomType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -79,6 +96,19 @@ WHERE (HotelStaff.staffId = @staffId)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Room" msprop:Generator_TableClassName="RoomDataTable" msprop:Generator_TableVarName="tableRoom" msprop:Generator_RowChangedName="RoomRowChanged" msprop:Generator_TablePropName="Room" msprop:Generator_RowDeletingName="RoomRowDeleting" msprop:Generator_RowChangingName="RoomRowChanging" msprop:Generator_RowEvHandlerName="RoomRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomRowDeleted" msprop:Generator_RowClassName="RoomRow" msprop:Generator_UserTableName="Room" msprop:Generator_RowEvArgName="RoomRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="roomType" msprop:Generator_ColumnVarNameInTable="columnroomType" msprop:Generator_ColumnPropNameInRow="roomType" msprop:Generator_ColumnPropNameInTable="roomTypeColumn" msprop:Generator_UserColumnName="roomType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
