@@ -49,14 +49,14 @@
             this.tbxPhoneNum = new System.Windows.Forms.TextBox();
             this.tbxAccId = new System.Windows.Forms.TextBox();
             this.tbxDutyId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(327, 321);
+            this.button2.Location = new System.Drawing.Point(578, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -66,7 +66,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(206, 326);
+            this.textBox3.Location = new System.Drawing.Point(460, 12);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
@@ -75,18 +75,20 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(77, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(209, 20);
             this.textBox4.TabIndex = 7;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(183, 4);
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(299, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
             this.button3.Text = "Retrieve";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // label2
             // 
@@ -172,7 +174,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(150, 329);
+            this.label13.Location = new System.Drawing.Point(404, 15);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 13);
             this.label13.TabIndex = 20;
@@ -182,68 +184,70 @@
             // 
             this.tbxFirstName.Location = new System.Drawing.Point(77, 34);
             this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(149, 20);
+            this.tbxFirstName.Size = new System.Drawing.Size(209, 20);
             this.tbxFirstName.TabIndex = 21;
             // 
             // tbxLastName
             // 
             this.tbxLastName.Location = new System.Drawing.Point(82, 71);
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(149, 20);
+            this.tbxLastName.Size = new System.Drawing.Size(204, 20);
             this.tbxLastName.TabIndex = 23;
             // 
             // tbxBankAcc
             // 
             this.tbxBankAcc.Location = new System.Drawing.Point(103, 145);
             this.tbxBankAcc.Name = "tbxBankAcc";
-            this.tbxBankAcc.Size = new System.Drawing.Size(149, 20);
+            this.tbxBankAcc.Size = new System.Drawing.Size(183, 20);
             this.tbxBankAcc.TabIndex = 24;
             // 
             // tbxStaffAdd
             // 
             this.tbxStaffAdd.Location = new System.Drawing.Point(86, 181);
             this.tbxStaffAdd.Name = "tbxStaffAdd";
-            this.tbxStaffAdd.Size = new System.Drawing.Size(149, 20);
+            this.tbxStaffAdd.Size = new System.Drawing.Size(200, 20);
             this.tbxStaffAdd.TabIndex = 25;
             // 
             // tbxPhoneNum
             // 
             this.tbxPhoneNum.Location = new System.Drawing.Point(86, 212);
             this.tbxPhoneNum.Name = "tbxPhoneNum";
-            this.tbxPhoneNum.Size = new System.Drawing.Size(149, 20);
+            this.tbxPhoneNum.Size = new System.Drawing.Size(200, 20);
             this.tbxPhoneNum.TabIndex = 26;
             // 
             // tbxAccId
             // 
             this.tbxAccId.Location = new System.Drawing.Point(86, 288);
             this.tbxAccId.Name = "tbxAccId";
-            this.tbxAccId.Size = new System.Drawing.Size(149, 20);
+            this.tbxAccId.Size = new System.Drawing.Size(200, 20);
             this.tbxAccId.TabIndex = 27;
             // 
             // tbxDutyId
             // 
             this.tbxDutyId.Location = new System.Drawing.Point(86, 250);
             this.tbxDutyId.Name = "tbxDutyId";
-            this.tbxDutyId.Size = new System.Drawing.Size(149, 20);
+            this.tbxDutyId.Size = new System.Drawing.Size(200, 20);
             this.tbxDutyId.TabIndex = 28;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(299, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(299, 71);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 29;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button4
+            // btnCreate
             // 
-            this.button4.Location = new System.Drawing.Point(299, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Create";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCreate.Location = new System.Drawing.Point(299, 41);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 30;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dateTimePicker1
             // 
@@ -256,10 +260,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(689, 358);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbxDutyId);
             this.Controls.Add(this.tbxAccId);
             this.Controls.Add(this.tbxPhoneNum);
@@ -312,8 +317,8 @@
         private System.Windows.Forms.TextBox tbxPhoneNum;
         private System.Windows.Forms.TextBox tbxAccId;
         private System.Windows.Forms.TextBox tbxDutyId;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
 
