@@ -57,5 +57,33 @@ namespace SWEN_Delonix_Regia_HMS
             manager.UpdateAccount(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, Boolean.Parse(comboBox1.Text));
             MessageBox.Show("Details has been saved!");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new DBManager().DeleteAccount(Convert.ToInt32(textBox4.Text));
+            MessageBox.Show("Successfully delete staff");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Main page = new Main();
+            this.Hide();
+            page.Show(this);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
