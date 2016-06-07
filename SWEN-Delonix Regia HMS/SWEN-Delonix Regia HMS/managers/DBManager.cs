@@ -230,6 +230,34 @@ namespace SWEN_Delonix_Regia_HMS.managers
             return tempList;
         }
 
+        public List<Room> GetAllRoomsWithHeader(string header)
+        {
+            cmd.CommandText = "SELECT * FROM Room WHERE roomHeader=@roomHeader";
+            cmd.Parameters.AddWithValue("@roomHeader", header);
+            List<Room> tempList = new List<Room>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Room d = new Room()
+                {
+                    roomId = Convert.ToInt32(dr[0]),
+                    roomType= Convert.ToString(dr[1]),
+                    roomPrice= Convert.ToInt32(dr[2]),
+                    roomHeader=Convert.ToString(dr[3]),
+                    roomNumber = Convert.ToString(dr[4]),
+                    roomStatus= Convert.ToString(dr[5]),
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
+        }
+
         public decimal GetRoomPriceByType(string roomType)
         {
             cmd.CommandText = "SELECT DISTINCT roomPrice FROM Room WHERE roomType=@roomType";
@@ -256,8 +284,6 @@ namespace SWEN_Delonix_Regia_HMS.managers
                 Room d = new Room()
                 {
                     roomStatus = (string)dr[0]
-                 
-
                 };
                 tempList.Add(d);
             }

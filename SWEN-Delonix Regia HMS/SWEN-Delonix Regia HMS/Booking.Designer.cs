@@ -68,6 +68,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.layoutPanel = new System.Windows.Forms.Panel();
+            this.drawTimer = new System.Windows.Forms.Timer(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
@@ -326,7 +330,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(550, 353);
+            this.label12.Location = new System.Drawing.Point(553, 414);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 16);
             this.label12.TabIndex = 33;
@@ -335,7 +339,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(673, 349);
+            this.numericUpDown1.Location = new System.Drawing.Point(676, 410);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 34;
@@ -344,7 +348,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(550, 410);
+            this.label13.Location = new System.Drawing.Point(553, 438);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(125, 16);
             this.label13.TabIndex = 35;
@@ -353,7 +357,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(673, 408);
+            this.numericUpDown2.Location = new System.Drawing.Point(676, 436);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 36;
@@ -374,7 +378,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(556, 241);
+            this.label14.Location = new System.Drawing.Point(279, 241);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(83, 16);
             this.label14.TabIndex = 38;
@@ -387,7 +391,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(675, 241);
+            this.comboBox1.Location = new System.Drawing.Point(398, 241);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 39;
@@ -411,7 +415,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(675, 291);
+            this.textBox3.Location = new System.Drawing.Point(398, 291);
             this.textBox3.MaxLength = 100;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -422,7 +426,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(556, 294);
+            this.label15.Location = new System.Drawing.Point(279, 294);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(99, 16);
             this.label15.TabIndex = 41;
@@ -438,11 +442,50 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // layoutPanel
+            // 
+            this.layoutPanel.Location = new System.Drawing.Point(556, 252);
+            this.layoutPanel.Name = "layoutPanel";
+            this.layoutPanel.Size = new System.Drawing.Size(423, 91);
+            this.layoutPanel.TabIndex = 44;
+            // 
+            // drawTimer
+            // 
+            this.drawTimer.Enabled = true;
+            this.drawTimer.Interval = 125;
+            this.drawTimer.Tick += new System.EventHandler(this.drawTimer_Tick);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.roomBindingSource;
+            this.comboBox2.DisplayMember = "roomType";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(652, 222);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 46;
+            this.comboBox2.ValueMember = "roomType";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(553, 225);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 16);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Room Header:";
+            // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 529);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.layoutPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox3);
@@ -533,6 +576,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel layoutPanel;
+        private System.Windows.Forms.Timer drawTimer;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label17;
 
     }
 }

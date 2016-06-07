@@ -15,10 +15,14 @@ namespace SWEN_Delonix_Regia_HMS
     public partial class Booking : Form
     {
         int currentGuestID = -1;
+        List<HitBox> hitboxes = new List<HitBox>();
         
         public Booking()
         {
             InitializeComponent();
+            this.Size = MasterControl.formSize;
+            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,6 +106,44 @@ namespace SWEN_Delonix_Regia_HMS
             MessageBox.Show("Your Booking has been confirmed! " + "Room Number: ???");
             //choose a room of selected type and change room status to Occupied, and display dates of occupancy
 
+        }
+
+        private void updateLayoutWithRooms(string header)
+        {
+            List<Room> roomList = new DBManager().GetAllRoomsWithHeader(header);
+            hitboxes.Clear();
+            Size rectSize = new Size(60, 30);
+            int marginX = 20, marginY = 10;
+                using (Graphics g = layoutPanel.CreateGraphics())
+                {
+                    SolidBrush brush = new SolidBrush(Color.Red); //Presume it's red color = occupied
+                    StringFormat stringFormat= new StringFormat();
+                    stringFormat.Alignment = StringAlignment.Center;
+
+                    int count = 0;
+                    foreach (Room room in roomList)
+                    {
+                        Rectangle rect = new Rectangle();
+                        if (count < 5)
+                        {
+                            rect = new Rectangle(new Point((count * rectSize.Width) + (count * marginX), 0), rectSize);
+                        }
+                        else
+                        {
+                            rect = new Rectangle(new Point(((count - 5) * rectSize.Width) + ((count - 5) * marginX), rectSize.Height + marginY), rectSize);
+                        }
+                        g.FillRectangle(brush, rect);
+
+                        count++;
+                    }
+
+                }
+        }
+
+        private void drawTimer_Tick(object sender, EventArgs e)
+        {
+            updateLayoutWithRooms("1");
+            drawTimer.Stop();
         }
 
        
