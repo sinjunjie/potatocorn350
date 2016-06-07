@@ -65,9 +65,12 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseDataset.Designer.cs">
+    <None Include="DatabaseDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
+    </None>
+    <Compile Include="DatabaseDataset.cs">
       <DependentUpon>DatabaseDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Housekeeping.cs">
@@ -94,6 +97,7 @@
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Room.cs" />
     <Compile Include="model\Staff.cs" />
+    <Compile Include="others\HitBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomAvailability.cs">
