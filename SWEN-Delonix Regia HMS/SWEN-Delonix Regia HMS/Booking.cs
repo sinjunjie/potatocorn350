@@ -33,9 +33,9 @@ namespace SWEN_Delonix_Regia_HMS
                 MessageBoxButtons.OK, MessageBoxIcon.Error); //Prompt the user that the Guest ID textbox requires data
                 return; //Exit from this click event
             }
-            int guestId = Convert.ToInt32(tbGuestID.Text);
             try
             {
+            int guestId = Convert.ToInt32(tbGuestID.Text);
                 List<Guest> guestList = new DBManager().GetGuestById(guestId);
                 Guest myGuest = guestList[0];
                 tbFirstName.Text = myGuest.firstName;
@@ -45,6 +45,10 @@ namespace SWEN_Delonix_Regia_HMS
                 tbAddress.Text = myGuest.guestAddress;
                 tbCountry.Text = myGuest.country;
                 currentGuestID = myGuest.guestId;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please insert numbers only for the guest ID field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
@@ -232,6 +236,12 @@ namespace SWEN_Delonix_Regia_HMS
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             updateLayoutWithRooms(comboBox2.Text);
+        }
+
+        private void Booking_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Environment.Exit(0);
         }
 
        
