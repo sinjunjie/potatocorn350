@@ -50,5 +50,10 @@ namespace SWEN_Delonix_Regia_HMS
                 tbPassword.PasswordChar = '*'; //You can put this to anything you want
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

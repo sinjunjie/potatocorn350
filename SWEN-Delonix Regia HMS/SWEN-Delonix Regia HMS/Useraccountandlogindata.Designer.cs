@@ -32,18 +32,18 @@
             this.DatabaseDataset = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
             this.DatabaseDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DatabaseDataset2 = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.DatabaseDatasetTableAdapters.AccountTableAdapter();
             this.accountIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatabaseDataset2 = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
+            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.DatabaseDatasetTableAdapters.AccountTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatabaseDatasetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).BeginInit();
             this.SuspendLayout();
             // 
             // DatabaseDataset
@@ -70,20 +70,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(808, 232);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // DatabaseDataset2
-            // 
-            this.DatabaseDataset2.DataSetName = "DatabaseDataset2";
-            this.DatabaseDataset2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataMember = "Account";
-            this.accountBindingSource.DataSource = this.DatabaseDataset2;
-            // 
-            // accountTableAdapter
-            // 
-            this.accountTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // accountIdDataGridViewTextBoxColumn
             // 
@@ -110,6 +97,20 @@
             this.isAdminDataGridViewTextBoxColumn.HeaderText = "isAdmin";
             this.isAdminDataGridViewTextBoxColumn.Name = "isAdminDataGridViewTextBoxColumn";
             // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataMember = "Account";
+            this.accountBindingSource.DataSource = this.DatabaseDataset2;
+            // 
+            // DatabaseDataset2
+            // 
+            this.DatabaseDataset2.DataSetName = "DatabaseDataset2";
+            this.DatabaseDataset2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountTableAdapter
+            // 
+            this.accountTableAdapter.ClearBeforeFill = true;
+            // 
             // Useraccount_and_login_data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,8 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatabaseDatasetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).EndInit();
             this.ResumeLayout(false);
 
         }
