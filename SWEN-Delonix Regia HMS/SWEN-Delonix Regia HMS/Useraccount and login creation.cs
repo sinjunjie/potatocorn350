@@ -85,5 +85,26 @@ namespace SWEN_Delonix_Regia_HMS
         {
 
         }
+
+        private void Useraccount_and_login_creation_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'junjieDBDataSet1.Account' table. You can move, or remove it, as needed.
+            this.accountTableAdapter.Fill(this.junjieDBDataSet1.Account);
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Useraccount_and_login_data page = new Useraccount_and_login_data();
+            this.Hide();
+            page.Show(this);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Main page = new Main();
+            this.Hide();
+            page.Show(this);
+        }
     }
 }
