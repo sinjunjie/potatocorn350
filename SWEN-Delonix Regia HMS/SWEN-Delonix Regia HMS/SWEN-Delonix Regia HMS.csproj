@@ -61,16 +61,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="JunjieDBDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JunjieDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="JunjieDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JunjieDBDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,28 +145,6 @@
     </None>
     <None Include="JunjieDBDataSet.xss">
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="JunjieDBDataSet1.xsc">
-      <DependentUpon>JunjieDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="JunjieDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JunjieDBDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JunjieDBDataSet1.xss">
-      <DependentUpon>JunjieDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="JunjieDBDataSet2.xsc">
-      <DependentUpon>JunjieDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="JunjieDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JunjieDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JunjieDBDataSet2.xss">
-      <DependentUpon>JunjieDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
