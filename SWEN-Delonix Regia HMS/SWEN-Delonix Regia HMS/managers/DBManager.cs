@@ -21,6 +21,22 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Connection = conn;
         }
 
+        public int DoLogin(string username, string password)
+        {
+            cmd.CommandText = "SELECT password FROM [dbo].[Account] WHERE username=@username"; //See this line ah
+            cmd.Parameters.AddWithValue("@username", username);
+            string retrievedPassword = Convert.ToString(cmd.ExecuteScalar()); //This is the password that the SQL query retrieved
+
+            if (retrievedPassword.Equals(password))//I compare it with the input password
+            {
+                return 1; //return 1 here to note that the password is correct ,and the user should be logged in
+            }
+            else//Login failed
+            {
+                return 0; // return 0 here to note that the password is wrong
+            }
+        }
+
         public List<Duty> GetAllDuties()
         {
             cmd.CommandText = "SELECT * FROM Duty";

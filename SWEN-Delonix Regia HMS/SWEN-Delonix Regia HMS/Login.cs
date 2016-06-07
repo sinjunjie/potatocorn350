@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWEN_Delonix_Regia_HMS.managers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,16 +20,35 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //public string connectionString = "Server=woodmon122.duckdns.org;Database=JunjieDB;User=swen;Password=swen";
-            
-            this.Hide();
-            Useraccount_and_login_creation ss = new Useraccount_and_login_creation();
-            ss.Show();
+
+            int result = new DBManager().DoLogin(tbUsername.Text, tbPassword.Text);
+            if (result == 1)//Login success if it is 1
+            {
+                Useraccount_and_login_creation ss = new Useraccount_and_login_creation();
+                ss.Show();
+                this.Hide();
+            }
+            else //Login failed if it is 0
+            {
+                MessageBox.Show("Username and password does not match", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                tbPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                tbPassword.PasswordChar = '*'; //You can put this to anything you want
+            }
         }
     }
 }
