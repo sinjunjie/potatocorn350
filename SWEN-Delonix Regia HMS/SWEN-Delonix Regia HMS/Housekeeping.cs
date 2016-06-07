@@ -40,6 +40,7 @@ namespace SWEN_Delonix_Regia_HMS
         private void btnRetrieve_Click(object sender, EventArgs e)
         {
             List<Staff> sl = new DBManager().GetStaffById(Convert.ToInt32(textBox4.Text));
+            
             tbxAccId.Text = sl[0].accountId.ToString();
             tbxFirstName.Text = sl[0].firstName;
             tbxLastName.Text = sl[0].lastName;
