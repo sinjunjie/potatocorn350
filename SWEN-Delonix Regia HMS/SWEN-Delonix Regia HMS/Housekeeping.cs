@@ -33,7 +33,7 @@ namespace SWEN_Delonix_Regia_HMS
             managerUpdate.UpdateStaff(Convert.ToInt32(textBox4.Text), tbxFirstName.Text, tbxLastName.Text, dateTimePicker1.Value, tbxBankAcc.Text, tbxStaffAdd.Text, Convert.ToInt32(tbxPhoneNum.Text), Convert.ToInt32(tbxDutyId.Text), Convert.ToInt32(tbxAccId.Text));
             MessageBox.Show("Details has been updated!"); ;
         }
-
+        //test
         private void button2_Click(object sender, EventArgs e)
         {
             new DBManager().DeleteStaff(Convert.ToInt32(textBox3.Text));
