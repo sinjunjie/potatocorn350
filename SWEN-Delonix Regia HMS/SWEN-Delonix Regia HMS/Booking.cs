@@ -75,8 +75,8 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void Booking_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'junjieDBDataSet.Room' table. You can move, or remove it, as needed.
-            this.roomTableAdapter.Fill(this.junjieDBDataSet.Room);
+            // TODO: This line of code loads data into the 'DatabaseDataset.Room' table. You can move, or remove it, as needed.
+            this.roomTableAdapter.Fill(this.DatabaseDataset.Room);
 
         }
 

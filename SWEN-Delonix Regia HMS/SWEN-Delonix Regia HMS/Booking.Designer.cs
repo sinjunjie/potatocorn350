@@ -63,15 +63,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.junjieDBDataSet = new SWEN_Delonix_Regia_HMS.JunjieDBDataSet();
-            this.roomTableAdapter = new SWEN_Delonix_Regia_HMS.JunjieDBDataSetTableAdapters.RoomTableAdapter();
+            this.DatabaseDataset = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
+            this.roomTableAdapter = new SWEN_Delonix_Regia_HMS.DatabaseDatasetTableAdapters.RoomTableAdapter();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junjieDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -396,12 +396,12 @@
             // roomBindingSource
             // 
             this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.junjieDBDataSet;
+            this.roomBindingSource.DataSource = this.DatabaseDataset;
             // 
-            // junjieDBDataSet
+            // DatabaseDataset
             // 
-            this.junjieDBDataSet.DataSetName = "JunjieDBDataSet";
-            this.junjieDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DatabaseDataset.DataSetName = "DatabaseDataset";
+            this.DatabaseDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomTableAdapter
             // 
@@ -482,7 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junjieDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -523,9 +523,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox1;
-        private JunjieDBDataSet junjieDBDataSet;
+        private DatabaseDataset DatabaseDataset;
         private System.Windows.Forms.BindingSource roomBindingSource;
-        private JunjieDBDataSetTableAdapters.RoomTableAdapter roomTableAdapter;
+        private DatabaseDatasetTableAdapters.RoomTableAdapter roomTableAdapter;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;

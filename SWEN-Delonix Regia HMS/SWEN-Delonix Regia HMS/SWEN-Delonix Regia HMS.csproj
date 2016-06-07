@@ -50,16 +50,16 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Housekeeping.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Housekeeping.Designer.cs">
       <DependentUpon>Housekeeping.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JunjieDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -135,16 +135,16 @@
     <EmbeddedResource Include="Useraccountandlogindata.resx">
       <DependentUpon>Useraccountandlogindata.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="JunjieDBDataSet.xsc">
-      <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
+    <None Include="DatabaseDataset.xsc">
+      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
     </None>
-    <None Include="JunjieDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
+    <None Include="DatabaseDataset.xsd">
       <SubType>Designer</SubType>
-      <LastGenOutput>JunjieDBDataSet1.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataset.Designer.cs</LastGenOutput>
     </None>
-    <None Include="JunjieDBDataSet.xss">
-      <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>
+    <None Include="DatabaseDataset.xss">
+      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
