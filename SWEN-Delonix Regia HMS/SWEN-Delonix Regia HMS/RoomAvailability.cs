@@ -23,5 +23,7 @@ namespace SWEN_Delonix_Regia_HMS
             this.Hide();
             page.Show(this);
         }
+
+        
     }
 }

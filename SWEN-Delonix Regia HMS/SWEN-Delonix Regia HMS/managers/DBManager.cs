@@ -185,6 +185,53 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+        public List<Room> GetRoomPrice()
+        {
+            cmd.CommandText = "SELECT DISTINCT FROM Room WHERE roomPrice=@roomPrice";
+
+            List<Room> tempList = new List<Room>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Room d = new Room()
+                {
+                    roomPrice = Convert.ToInt32(dr[0]),                
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
+        }
+        public List<Room> GetRoomStatus(string roomStatus)
+        {
+            cmd.CommandText = "SELECT COUNT(*) FROM Room WHERE roomStatus = 'Available'";
+            cmd.Parameters.AddWithValue("@roomStatus", roomStatus);
+
+            List<Room> tempList = new List<Room>();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Room d = new Room()
+                {
+                    roomStatus = (string)dr[0]
+                 
+
+                };
+                tempList.Add(d);
+            }
+
+            dr.Close();
+            conn.Close();
+
+            return tempList;
+        }
         public void DeleteGuest(int guestId)
         {
             cmd.CommandText = "DELETE FROM Guest WHERE guestId=@guestId";

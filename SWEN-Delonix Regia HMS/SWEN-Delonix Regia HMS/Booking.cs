@@ -34,16 +34,26 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             DBManager manager = new DBManager();
+            if (textBox1 == null)
+            {
+                MessageBox.Show("Please input existing guest's ID first!", "Error",
+                MessageBoxButtons.OK);
+            }
+            else{
             manager.UpdateGuest(Convert.ToInt32(textBox1.Text), textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
-            MessageBox.Show("Details has been saved!");
+            MessageBox.Show("Details have been saved!");
+            
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             DBManager manager = new DBManager();
             manager.InsertGuest(textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
-            MessageBox.Show("Details has been created!");
+            MessageBox.Show("Details have been created!");
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,5 +79,18 @@ namespace SWEN_Delonix_Regia_HMS
             this.roomTableAdapter.Fill(this.junjieDBDataSet.Room);
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DBManager manager = new DBManager();
+            MessageBox.Show(this.comboBox1.SelectedItem.ToString());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Booking has been confirmed! " + "Room Number: ???");
+        }
+
+       
     }
 }
