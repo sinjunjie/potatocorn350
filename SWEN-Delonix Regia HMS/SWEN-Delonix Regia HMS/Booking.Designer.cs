@@ -587,6 +587,7 @@
             this.MaximizeBox = false;
             this.Name = "Booking";
             this.Text = "Booking";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Booking_FormClosing);
             this.Load += new System.EventHandler(this.Booking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
