@@ -39,7 +39,7 @@ namespace SWEN_Delonix_Regia_HMS
             if (textBox1 == null)
             {
                 MessageBox.Show("Please input existing guest's ID first!", "Error",
-                MessageBoxButtons.OK);
+                MessageBoxButtons.OK);//Error message to show that guest id is not found in database
             }
             else{
             manager.UpdateGuest(Convert.ToInt32(textBox1.Text), textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
@@ -60,7 +60,7 @@ namespace SWEN_Delonix_Regia_HMS
         {
             Main page = new Main();
             this.Hide();
-            page.Show(this);
+            page.Show(this);//return to main menu
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -83,12 +83,14 @@ namespace SWEN_Delonix_Regia_HMS
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DBManager manager = new DBManager();
-            MessageBox.Show(this.comboBox1.SelectedItem.ToString());
+            MessageBox.Show(this.comboBox1.SelectedItem.ToString());//dynamically display the prices of each room type
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Your Booking has been confirmed! " + "Room Number: ???");
+            //choose a room of selected type and change room status to Occupied, and display dates of occupancy
+
         }
 
        
