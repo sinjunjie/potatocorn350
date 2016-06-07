@@ -11,6 +11,6 @@ namespace SWEN_Delonix_Regia_HMS.model
         public int accountId { get; set; }
         public string username { get; set; }
         public string password { get; set; }
-        public Boolean isAdmin { get; set; }
+        public int isAdmin { get; set; }
     }
 }

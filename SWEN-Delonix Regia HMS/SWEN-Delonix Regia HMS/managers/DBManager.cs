@@ -205,7 +205,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
                     accountId = (int)dr[0],
                     username = (string)dr[1],
                     password = (string)dr[2],
-                    isAdmin = (Boolean)dr[3],
+                    isAdmin = (int)dr[3],
                 };
                 tempList.Add(d);
             }
@@ -218,7 +218,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
 
         public void UpdateAccount(int accountId, string username, string password, Boolean isAdmin)
         {
-            cmd.CommandText = "UPDATE [dbo].[Account] SET [username] = @username, [password] = @password,[isAdmin]= @isAdmin";
+            cmd.CommandText = "UPDATE [dbo].[Account] SET [username] = @username, [password] = @password,[isAdmin] = @isAdmin WHERE accountId = @accountId";
             cmd.Parameters.AddWithValue("@accountId", accountId);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
