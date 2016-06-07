@@ -15,6 +15,9 @@ namespace SWEN_Delonix_Regia_HMS
         public RoomAvailability()
         {
             InitializeComponent();
+            this.Size = MasterControl.formSize;
+            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
         private void button2_Click(object sender, EventArgs e)

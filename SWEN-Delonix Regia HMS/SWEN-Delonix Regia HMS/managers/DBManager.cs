@@ -188,7 +188,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
             conn.Close();
 
         }
-        public void InsertGuest(string firstName, string lastName, int phoneNum, string email, string guestAddress, string country)
+        public int InsertGuest(string firstName, string lastName, int phoneNum, string email, string guestAddress, string country)
         {
             cmd.CommandText = "INSERT INTO [dbo].[Guest]([firstName],[lastName],[phoneNum],[email],[guestAddress],[country]) VALUES (@firstName,@lastName,@phoneNum,@email,@guestAddress,@country)";
             cmd.Parameters.AddWithValue("@firstName", firstName);
@@ -199,7 +199,13 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Parameters.AddWithValue("@country", country);
 
             cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "SELECT @@IDENTITY";
+            int guestID = Convert.ToInt32(cmd.ExecuteScalar());
+
             conn.Close();
+
+            return guestID;
         }
         public List<Room> GetRoomPrice()
         {
@@ -223,6 +229,19 @@ namespace SWEN_Delonix_Regia_HMS.managers
 
             return tempList;
         }
+
+        public decimal GetRoomPriceByType(string roomType)
+        {
+            cmd.CommandText = "SELECT DISTINCT roomPrice FROM Room WHERE roomType=@roomType";
+            cmd.Parameters.AddWithValue("@roomType", roomType);
+
+            decimal price = Convert.ToDecimal(cmd.ExecuteScalar());
+            conn.Close();
+
+
+            return price;
+        }
+
         public List<Room> GetRoomStatus(string roomStatus)
         {
             cmd.CommandText = "SELECT COUNT(*) FROM Room WHERE roomStatus = 'Available'";

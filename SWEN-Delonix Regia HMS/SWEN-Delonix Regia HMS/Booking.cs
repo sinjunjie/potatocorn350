@@ -14,6 +14,8 @@ namespace SWEN_Delonix_Regia_HMS
 {
     public partial class Booking : Form
     {
+        int currentGuestID = -1;
+        
         public Booking()
         {
             InitializeComponent();
@@ -21,39 +23,43 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int guestId = Convert.ToInt32(textBox1.Text);
-            List<Guest> guestList = new DBManager().GetGuestById(guestId);
-            Guest myGuest = guestList[0];
-            textBox2.Text = myGuest.firstName;
-            tbLastName.Text = myGuest.lastName;
-            textBox4.Text = Convert.ToString(myGuest.phoneNum);
-            tbEmail.Text = myGuest.email;
-            textBox6.Text = myGuest.guestAddress;
-            textBox7.Text = myGuest.country;
+            if(tbGuestID.Text.Equals(String.Empty)){
+                MessageBox.Show("Please input existing guest's ID first!", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error); //Prompt the user that the Guest ID textbox requires data
+                return; //Exit from this click event
+            }
+            int guestId = Convert.ToInt32(tbGuestID.Text);
+            try
+            {
+                List<Guest> guestList = new DBManager().GetGuestById(guestId);
+                Guest myGuest = guestList[0];
+                tbFirstName.Text = myGuest.firstName;
+                tbLastName.Text = myGuest.lastName;
+                tbPhoneNum.Text = Convert.ToString(myGuest.phoneNum);
+                tbEmail.Text = myGuest.email;
+                tbAddress.Text = myGuest.guestAddress;
+                tbCountry.Text = myGuest.country;
+                currentGuestID = myGuest.guestId;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There are no guests with this ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             DBManager manager = new DBManager();
-            if (textBox1 == null)
-            {
-                MessageBox.Show("Please input existing guest's ID first!", "Error",
-                MessageBoxButtons.OK);//Error message to show that guest id is not found in database
-            }
-            else{
-            manager.UpdateGuest(Convert.ToInt32(textBox1.Text), textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
-            MessageBox.Show("Details have been saved!");
-            
-            }
+            manager.UpdateGuest(currentGuestID, tbFirstName.Text, tbLastName.Text, Convert.ToInt32(tbPhoneNum.Text), tbEmail.Text, tbAddress.Text, tbCountry.Text);
+            MessageBox.Show("Details have been saved!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             DBManager manager = new DBManager();
-            manager.InsertGuest(textBox2.Text, tbLastName.Text, Convert.ToInt32(textBox4.Text), tbEmail.Text, textBox6.Text, textBox7.Text);
-            MessageBox.Show("Details have been created!");
-            
+            int guestID = manager.InsertGuest(tbFirstName.Text, tbLastName.Text, Convert.ToInt32(tbPhoneNum.Text), tbEmail.Text, tbAddress.Text, tbCountry.Text);
+            MessageBox.Show("Details have been created!", "Success!",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            tbGuestID.Text = guestID.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,13 +83,18 @@ namespace SWEN_Delonix_Regia_HMS
         {
             // TODO: This line of code loads data into the 'DatabaseDataset.Room' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.DatabaseDataset.Room);
+            comboBox1_SelectedIndexChanged(null, null);
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DBManager manager = new DBManager();
-            MessageBox.Show(this.comboBox1.SelectedItem.ToString());//dynamically display the prices of each room type
+            string RoomType = comboBox1.Text;
+
+            decimal price = manager.GetRoomPriceByType(RoomType);
+
+            textBox3.Text = price.ToString();//dynamically display the prices of each room type
         }
 
         private void button5_Click(object sender, EventArgs e)

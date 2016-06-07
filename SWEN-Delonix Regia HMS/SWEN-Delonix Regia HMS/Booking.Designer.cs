@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Booking));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbGuestID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbPhoneNum = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbCountry = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -85,13 +85,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Guest ID:";
             // 
-            // textBox1
+            // tbGuestID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(154, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbGuestID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGuestID.Location = new System.Drawing.Point(154, 133);
+            this.tbGuestID.MaxLength = 9;
+            this.tbGuestID.Name = "tbGuestID";
+            this.tbGuestID.Size = new System.Drawing.Size(100, 22);
+            this.tbGuestID.TabIndex = 1;
             // 
             // label2
             // 
@@ -143,14 +144,14 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Guest Address:";
             // 
-            // textBox2
+            // tbFirstName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(154, 238);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 7;
+            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFirstName.Location = new System.Drawing.Point(154, 238);
+            this.tbFirstName.MaxLength = 100;
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(100, 22);
+            this.tbFirstName.TabIndex = 7;
             // 
             // tbLastName
             // 
@@ -161,14 +162,14 @@
             this.tbLastName.Size = new System.Drawing.Size(100, 22);
             this.tbLastName.TabIndex = 8;
             // 
-            // textBox4
+            // tbPhoneNum
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(154, 313);
-            this.textBox4.MaxLength = 20;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 9;
+            this.tbPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPhoneNum.Location = new System.Drawing.Point(154, 313);
+            this.tbPhoneNum.MaxLength = 20;
+            this.tbPhoneNum.Name = "tbPhoneNum";
+            this.tbPhoneNum.Size = new System.Drawing.Size(100, 22);
+            this.tbPhoneNum.TabIndex = 9;
             // 
             // tbEmail
             // 
@@ -189,23 +190,23 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Country of Origin:";
             // 
-            // textBox6
+            // tbAddress
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(154, 385);
-            this.textBox6.MaxLength = 100;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(188, 22);
-            this.textBox6.TabIndex = 12;
+            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress.Location = new System.Drawing.Point(154, 385);
+            this.tbAddress.MaxLength = 100;
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(188, 22);
+            this.tbAddress.TabIndex = 12;
             // 
-            // textBox7
+            // tbCountry
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(154, 419);
-            this.textBox7.MaxLength = 50;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 13;
+            this.tbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCountry.Location = new System.Drawing.Point(154, 419);
+            this.tbCountry.MaxLength = 50;
+            this.tbCountry.Name = "tbCountry";
+            this.tbCountry.Size = new System.Drawing.Size(100, 22);
+            this.tbCountry.TabIndex = 13;
             // 
             // label8
             // 
@@ -413,6 +414,7 @@
             this.textBox3.Location = new System.Drawing.Point(675, 291);
             this.textBox3.MaxLength = 100;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(64, 22);
             this.textBox3.TabIndex = 43;
             // 
@@ -462,20 +464,22 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbCountry);
+            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbPhoneNum);
             this.Controls.Add(this.tbLastName);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbGuestID);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Booking";
             this.Text = "Booking";
             this.Load += new System.EventHandler(this.Booking_Load);
@@ -492,19 +496,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbGuestID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbLastName;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbPhoneNum;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbCountry;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
