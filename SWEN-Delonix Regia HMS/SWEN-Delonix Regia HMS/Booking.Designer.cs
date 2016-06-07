@@ -232,9 +232,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.DodgerBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(154, 464);
+            this.button3.Location = new System.Drawing.Point(150, 464);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(85, 34);
             this.button3.TabIndex = 24;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
@@ -254,9 +254,9 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(271, 464);
+            this.button4.Location = new System.Drawing.Point(257, 464);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(85, 34);
             this.button4.TabIndex = 26;
             this.button4.Text = "Create";
             this.button4.UseVisualStyleBackColor = false;
@@ -363,7 +363,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(673, 464);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 23);
+            this.button5.Size = new System.Drawing.Size(89, 34);
             this.button5.TabIndex = 37;
             this.button5.Text = "Book Room";
             this.button5.UseVisualStyleBackColor = false;
