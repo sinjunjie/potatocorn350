@@ -93,17 +93,17 @@
     <Compile Include="StaffManagement.Designer.cs">
       <DependentUpon>StaffManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Useraccount and login creation.cs">
+    <Compile Include="Useraccountandlogincreation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Useraccount and login creation.Designer.cs">
-      <DependentUpon>Useraccount and login creation.cs</DependentUpon>
+    <Compile Include="Useraccountandlogincreation.Designer.cs">
+      <DependentUpon>Useraccountandlogincreation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Useraccount and login data.cs">
+    <Compile Include="Useraccountandlogindata.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Useraccount and login data.Designer.cs">
-      <DependentUpon>Useraccount and login data.cs</DependentUpon>
+    <Compile Include="Useraccountandlogindata.Designer.cs">
+      <DependentUpon>Useraccountandlogindata.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
@@ -129,11 +129,11 @@
     <EmbeddedResource Include="RoomAvailability.resx">
       <DependentUpon>RoomAvailability.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Useraccount and login creation.resx">
-      <DependentUpon>Useraccount and login creation.cs</DependentUpon>
+    <EmbeddedResource Include="Useraccountandlogincreation.resx">
+      <DependentUpon>Useraccountandlogincreation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Useraccount and login data.resx">
-      <DependentUpon>Useraccount and login data.cs</DependentUpon>
+    <EmbeddedResource Include="Useraccountandlogindata.resx">
+      <DependentUpon>Useraccountandlogindata.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="JunjieDBDataSet.xsc">
       <DependentUpon>JunjieDBDataSet.xsd</DependentUpon>

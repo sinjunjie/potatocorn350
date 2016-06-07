@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SWEN_Delonix_Regia_HMS
+{
+    public partial class Useraccount_and_login_data : Form
+    {
+        public Useraccount_and_login_data()
+        {
+            InitializeComponent();
+        }
+
+        private void Useraccount_and_login_data_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'junjieDBDataSet2.Account' table. You can move, or remove it, as needed.
+            this.accountTableAdapter.Fill(this.junjieDBDataSet2.Account);
+
+        }
+    }
+}
