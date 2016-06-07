@@ -16,7 +16,7 @@ namespace SWEN_Delonix_Regia_HMS
         {
             InitializeComponent();
             this.Size = MasterControl.formSize;
-            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MinimizeBox = MasterControl.showMinimizeBox;//test
             this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
