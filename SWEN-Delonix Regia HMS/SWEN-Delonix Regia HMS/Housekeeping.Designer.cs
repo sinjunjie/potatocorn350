@@ -56,7 +56,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(327, 321);
+            this.button2.Location = new System.Drawing.Point(578, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -66,7 +66,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(206, 326);
+            this.textBox3.Location = new System.Drawing.Point(460, 12);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
@@ -75,12 +75,12 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(77, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(209, 20);
             this.textBox4.TabIndex = 7;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(183, 4);
+            this.button3.Location = new System.Drawing.Point(299, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -172,7 +172,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(150, 329);
+            this.label13.Location = new System.Drawing.Point(404, 15);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 13);
             this.label13.TabIndex = 20;
@@ -182,49 +182,49 @@
             // 
             this.tbxFirstName.Location = new System.Drawing.Point(77, 34);
             this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(149, 20);
+            this.tbxFirstName.Size = new System.Drawing.Size(209, 20);
             this.tbxFirstName.TabIndex = 21;
             // 
             // tbxLastName
             // 
             this.tbxLastName.Location = new System.Drawing.Point(82, 71);
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(149, 20);
+            this.tbxLastName.Size = new System.Drawing.Size(204, 20);
             this.tbxLastName.TabIndex = 23;
             // 
             // tbxBankAcc
             // 
             this.tbxBankAcc.Location = new System.Drawing.Point(103, 145);
             this.tbxBankAcc.Name = "tbxBankAcc";
-            this.tbxBankAcc.Size = new System.Drawing.Size(149, 20);
+            this.tbxBankAcc.Size = new System.Drawing.Size(183, 20);
             this.tbxBankAcc.TabIndex = 24;
             // 
             // tbxStaffAdd
             // 
             this.tbxStaffAdd.Location = new System.Drawing.Point(86, 181);
             this.tbxStaffAdd.Name = "tbxStaffAdd";
-            this.tbxStaffAdd.Size = new System.Drawing.Size(149, 20);
+            this.tbxStaffAdd.Size = new System.Drawing.Size(200, 20);
             this.tbxStaffAdd.TabIndex = 25;
             // 
             // tbxPhoneNum
             // 
             this.tbxPhoneNum.Location = new System.Drawing.Point(86, 212);
             this.tbxPhoneNum.Name = "tbxPhoneNum";
-            this.tbxPhoneNum.Size = new System.Drawing.Size(149, 20);
+            this.tbxPhoneNum.Size = new System.Drawing.Size(200, 20);
             this.tbxPhoneNum.TabIndex = 26;
             // 
             // tbxAccId
             // 
             this.tbxAccId.Location = new System.Drawing.Point(86, 288);
             this.tbxAccId.Name = "tbxAccId";
-            this.tbxAccId.Size = new System.Drawing.Size(149, 20);
+            this.tbxAccId.Size = new System.Drawing.Size(200, 20);
             this.tbxAccId.TabIndex = 27;
             // 
             // tbxDutyId
             // 
             this.tbxDutyId.Location = new System.Drawing.Point(86, 250);
             this.tbxDutyId.Name = "tbxDutyId";
-            this.tbxDutyId.Size = new System.Drawing.Size(149, 20);
+            this.tbxDutyId.Size = new System.Drawing.Size(200, 20);
             this.tbxDutyId.TabIndex = 28;
             // 
             // btnUpdate
