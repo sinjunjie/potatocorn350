@@ -49,7 +49,7 @@
             this.tbxPhoneNum = new System.Windows.Forms.TextBox();
             this.tbxAccId = new System.Windows.Forms.TextBox();
             this.tbxDutyId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -227,14 +227,15 @@
             this.tbxDutyId.Size = new System.Drawing.Size(149, 20);
             this.tbxDutyId.TabIndex = 28;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(299, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(299, 71);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 29;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 
@@ -260,7 +261,7 @@
             this.ClientSize = new System.Drawing.Size(689, 358);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbxDutyId);
             this.Controls.Add(this.tbxAccId);
             this.Controls.Add(this.tbxPhoneNum);
@@ -313,7 +314,7 @@
         private System.Windows.Forms.TextBox tbxPhoneNum;
         private System.Windows.Forms.TextBox tbxAccId;
         private System.Windows.Forms.TextBox tbxDutyId;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
