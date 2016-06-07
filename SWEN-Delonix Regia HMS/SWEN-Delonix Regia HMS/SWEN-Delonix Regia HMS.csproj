@@ -102,6 +102,7 @@
     <Compile Include="RoomAvailability.Designer.cs">
       <DependentUpon>RoomAvailability.cs</DependentUpon>
     </Compile>
+    <Compile Include="settings\MasterControl.cs" />
     <Compile Include="StaffManagement.cs">
       <SubType>Form</SubType>
     </Compile>

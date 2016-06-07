@@ -17,6 +17,9 @@ namespace SWEN_Delonix_Regia_HMS
         public Housekeeping()
         {
             InitializeComponent();
+            this.Size = MasterControl.formSize;
+            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
         private void Housekeeping_Load(object sender, EventArgs e)

@@ -16,6 +16,9 @@ namespace SWEN_Delonix_Regia_HMS
         public StaffManagement()
         {
             InitializeComponent();
+            this.Size = MasterControl.formSize;
+            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
         private void Staff_management_module_Load(object sender, EventArgs e)

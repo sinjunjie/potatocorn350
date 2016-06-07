@@ -15,6 +15,9 @@ namespace SWEN_Delonix_Regia_HMS
         public Useraccount_and_login_data()
         {
             InitializeComponent();
+            this.Size = MasterControl.formSize;
+            this.MinimizeBox = MasterControl.showMinimizeBox;
+            this.MaximizeBox = MasterControl.showMaximizeBox;
         }
 
         private void Useraccount_and_login_data_Load(object sender, EventArgs e)
