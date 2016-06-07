@@ -50,7 +50,7 @@
             this.tbxAccId = new System.Windows.Forms.TextBox();
             this.tbxDutyId = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Retrieve";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // label2
             // 
@@ -236,14 +236,15 @@
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCreate
             // 
-            this.button4.Location = new System.Drawing.Point(299, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Create";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCreate.Location = new System.Drawing.Point(299, 41);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 30;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dateTimePicker1
             // 
@@ -258,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 358);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxDutyId);
             this.Controls.Add(this.tbxAccId);
@@ -313,7 +314,7 @@
         private System.Windows.Forms.TextBox tbxAccId;
         private System.Windows.Forms.TextBox tbxDutyId;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
 

@@ -54,7 +54,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
         }
 
-        public void UpdateStaff(int staffId, string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId )
+        public void UpdateStaff(int staffId, string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId)
         {
             cmd.CommandText = "UPDATE HotelStaff SET [firstName] = @firstName,[lastName] = @lastName,[dateOfBirth] = @dateOfBirth,[bankAccountNumber] = @bankAccountNumber,[staffAddress] = @staffAddress,[phoneNumber] = @phoneNumber, [dutyId] = @dutyId, [accountId] = @accountId  WHERE staffId=@staffId";
             cmd.Parameters.AddWithValue("@staffId", staffId);
@@ -62,7 +62,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Parameters.AddWithValue("@lastName", lastName);
             cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
             cmd.Parameters.AddWithValue("@bankAccountNumber", bankAccountNumber);
-            cmd.Parameters.AddWithValue("@staffAddress", staffAddress); 
+            cmd.Parameters.AddWithValue("@staffAddress", staffAddress);
             cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber);
             cmd.Parameters.AddWithValue("@dutyId", dutyId);
             cmd.Parameters.AddWithValue("@accountId", accountId);
@@ -77,12 +77,12 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.Parameters.AddWithValue("@lastName", lastName);
             cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
             cmd.Parameters.AddWithValue("@bankAccountNumber", bankAccountNumber);
-            cmd.Parameters.AddWithValue("@staffAddress", staffAddress); 
+            cmd.Parameters.AddWithValue("@staffAddress", staffAddress);
             cmd.Parameters.AddWithValue("@phoneNumber", phoneNumber);
             cmd.Parameters.AddWithValue("@dutyId", dutyId);
             cmd.Parameters.AddWithValue("@accountId", accountId);
             cmd.ExecuteNonQuery();
-            
+
         }
 
         public void DeleteStaff(int staffId)
