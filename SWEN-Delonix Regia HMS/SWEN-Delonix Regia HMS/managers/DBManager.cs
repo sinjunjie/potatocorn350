@@ -361,5 +361,23 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
 
         }
+
+        public int InsertBooking(int guestID, DateTime timeIn, DateTime timeOut, int numAdult, int numChildren, string remarks, int roomId)
+        {
+            cmd.CommandText = "INSERT INTO [dbo].[Reservation] ([guestId] ,[dateStart] ,[dateEnd], [numberOfAdult] ,[numberOfChildren] ,[additionalRemarks] ,[roomId]) VALUES (@guestID, @timeIn, @timeOut, @numAdult, @numChildren, @remarks, @roomId)";
+            cmd.Parameters.AddWithValue("@guestID", guestID);
+            cmd.Parameters.AddWithValue("@timeIn", timeIn);
+            cmd.Parameters.AddWithValue("@timeOut", timeOut);
+            cmd.Parameters.AddWithValue("@numAdult", numAdult);
+            cmd.Parameters.AddWithValue("@numChildren", numChildren);
+            cmd.Parameters.AddWithValue("@remarks", remarks);
+            cmd.Parameters.AddWithValue("@roomId", roomId);
+
+            int result = cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            return result;
+        }
     }
 }

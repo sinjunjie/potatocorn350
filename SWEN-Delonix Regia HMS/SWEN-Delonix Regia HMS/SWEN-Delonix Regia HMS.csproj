@@ -65,19 +65,20 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
-    <None Include="DatabaseDataset.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
-    </None>
-    <Compile Include="DatabaseDataset.cs">
-      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
+    <Compile Include="JunJieDBDataSet.cs">
+      <DependentUpon>JunJieDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Housekeeping.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Housekeeping.Designer.cs">
       <DependentUpon>Housekeeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JunJieDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JunJieDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -155,16 +156,16 @@
     <EmbeddedResource Include="Useraccountandlogindata.resx">
       <DependentUpon>Useraccountandlogindata.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabaseDataset.xsc">
-      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
+    <None Include="JunJieDBDataSet.xsc">
+      <DependentUpon>JunJieDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DatabaseDataset.xsd">
+    <None Include="JunJieDBDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataset.Designer.cs</LastGenOutput>
+      <LastGenOutput>JunJieDBDataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DatabaseDataset.xss">
-      <DependentUpon>DatabaseDataset.xsd</DependentUpon>
+    <None Include="JunJieDBDataSet.xss">
+      <DependentUpon>JunJieDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.DatabaseDataset = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
-            this.DatabaseDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.JunJieDBDataSet = new SWEN_Delonix_Regia_HMS.JunJieDBDataSet();
+            this.JunJieDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.accountIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DatabaseDataset2 = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
-            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.DatabaseDatasetTableAdapters.AccountTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDatasetBindingSource)).BeginInit();
+            this.JunJieDBDataSet2 = new SWEN_Delonix_Regia_HMS.JunJieDBDataSet();
+            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.JunJieDBDataSetTableAdapters.AccountTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
-            // DatabaseDataset
+            // JunJieDBDataSet
             // 
-            this.DatabaseDataset.DataSetName = "DatabaseDataset";
-            this.DatabaseDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.JunJieDBDataSet.DataSetName = "JunJieDBDataSet";
+            this.JunJieDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DatabaseDatasetBindingSource
+            // JunJieDBDataSetBindingSource
             // 
-            this.DatabaseDatasetBindingSource.DataSource = this.DatabaseDataset;
-            this.DatabaseDatasetBindingSource.Position = 0;
+            this.JunJieDBDataSetBindingSource.DataSource = this.JunJieDBDataSet;
+            this.JunJieDBDataSetBindingSource.Position = 0;
             // 
             // dataGridView1
             // 
@@ -100,12 +100,12 @@
             // accountBindingSource
             // 
             this.accountBindingSource.DataMember = "Account";
-            this.accountBindingSource.DataSource = this.DatabaseDataset2;
+            this.accountBindingSource.DataSource = this.JunJieDBDataSet2;
             // 
-            // DatabaseDataset2
+            // JunJieDBDataSet2
             // 
-            this.DatabaseDataset2.DataSetName = "DatabaseDataset2";
-            this.DatabaseDataset2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.JunJieDBDataSet2.DataSetName = "JunJieDBDataSet2";
+            this.JunJieDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // accountTableAdapter
             // 
@@ -120,23 +120,23 @@
             this.Name = "Useraccount_and_login_data";
             this.Text = "Useraccount_and_login_data";
             this.Load += new System.EventHandler(this.Useraccount_and_login_data_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDatasetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JunJieDBDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DatabaseDataset DatabaseDataset;
-        private System.Windows.Forms.BindingSource DatabaseDatasetBindingSource;
+        private JunJieDBDataSet JunJieDBDataSet;
+        private System.Windows.Forms.BindingSource JunJieDBDataSetBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DatabaseDataset DatabaseDataset2;
+        private JunJieDBDataSet JunJieDBDataSet2;
         private System.Windows.Forms.BindingSource accountBindingSource;
-        private DatabaseDatasetTableAdapters.AccountTableAdapter accountTableAdapter;
+        private JunJieDBDataSetTableAdapters.AccountTableAdapter accountTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;

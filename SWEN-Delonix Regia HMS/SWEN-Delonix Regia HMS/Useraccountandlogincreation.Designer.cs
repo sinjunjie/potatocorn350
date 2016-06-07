@@ -49,13 +49,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.DatabaseDataset = new SWEN_Delonix_Regia_HMS.DatabaseDataset();
+            this.Dataset = new SWEN_Delonix_Regia_HMS.JunJieDBDataSet();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.DatabaseDatasetTableAdapters.AccountTableAdapter();
+            this.accountTableAdapter = new SWEN_Delonix_Regia_HMS.JunJieDBDataSetTableAdapters.AccountTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,15 +248,15 @@
             this.label8.Text = "Enter Account Id to delete";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // DatabaseDataset
+            // Dataset
             // 
-            this.DatabaseDataset.DataSetName = "DatabaseDataset";
-            this.DatabaseDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Dataset.DataSetName = "Dataset";
+            this.Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataMember = "Account";
-            this.accountBindingSource.DataSource = this.DatabaseDataset;
+            this.accountBindingSource.DataSource = this.Dataset;
             // 
             // accountTableAdapter
             // 
@@ -315,7 +315,7 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.Useraccount_and_login_creation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DatabaseDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,9 +343,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private DatabaseDataset DatabaseDataset;
+        private JunJieDBDataSet Dataset;
         private System.Windows.Forms.BindingSource accountBindingSource;
-        private DatabaseDatasetTableAdapters.AccountTableAdapter accountTableAdapter;
+        private JunJieDBDataSetTableAdapters.AccountTableAdapter accountTableAdapter;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
     }

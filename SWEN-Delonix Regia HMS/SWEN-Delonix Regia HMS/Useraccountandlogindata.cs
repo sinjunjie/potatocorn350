@@ -22,8 +22,8 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void Useraccount_and_login_data_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DatabaseDataset2.Account' table. You can move, or remove it, as needed.
-            this.accountTableAdapter.Fill(this.DatabaseDataset.Account);
+            // TODO: This line of code loads data into the 'Dataset2.Account' table. You can move, or remove it, as needed.
+            this.accountTableAdapter.Fill(this.JunJieDBDataSet.Account);
 
         }
 

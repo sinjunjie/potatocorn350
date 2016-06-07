@@ -91,8 +91,8 @@ namespace SWEN_Delonix_Regia_HMS
 
         private void Useraccount_and_login_creation_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DatabaseDataset1.Account' table. You can move, or remove it, as needed.
-            this.accountTableAdapter.Fill(this.DatabaseDataset.Account);
+            // TODO: This line of code loads data into the 'Dataset1.Account' table. You can move, or remove it, as needed.
+            this.accountTableAdapter.Fill(this.Dataset.Account);
 
         }
 

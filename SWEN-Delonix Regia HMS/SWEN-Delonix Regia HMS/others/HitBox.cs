@@ -17,6 +17,14 @@ namespace SWEN_Delonix_Regia_HMS
         {
             rect = _rect;
         }
+        public bool Hit(int x, int y)
+        {
+            if (rect.Contains(new Point(x,y)))
+            {
+                return true;
+            }
+            return false;
+        }
 
         public bool Hit(Point point)
         {
