@@ -69,7 +69,7 @@ namespace SWEN_Delonix_Regia_HMS.managers
             cmd.ExecuteNonQuery();
         }
 
-        public void InsertStaff(int staffId, string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId)
+        public void InsertStaff(int staffId,string firstName, string lastName, DateTime dateOfBirth, string bankAccountNumber, string staffAddress, int phoneNumber, int dutyId, int accountId)
         {
             cmd.CommandText = "INSERT INTO [dbo].[HotelStaff]([firstName],[lastName],[dateOfBirth],[bankAccountNumber],[staffAddress],[phoneNumber],[dutyId],[accountId]) VALUES (@firstName,@lastName,@dateOfBirth,@bankAccountNumber,@staffAddress,@phoneNumber,@dutyId,@accountId)";
             cmd.Parameters.AddWithValue("@staffId", staffId);
