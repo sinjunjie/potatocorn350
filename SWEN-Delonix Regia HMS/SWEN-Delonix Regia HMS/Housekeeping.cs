@@ -59,6 +59,13 @@ namespace SWEN_Delonix_Regia_HMS
             MessageBox.Show("Details has been created!");
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Main page = new Main();
+            this.Hide();
+            page.Show(this);
+        }
+
 
     }
 }
