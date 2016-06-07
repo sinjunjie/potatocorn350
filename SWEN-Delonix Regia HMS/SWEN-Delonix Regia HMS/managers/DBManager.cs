@@ -244,5 +244,14 @@ namespace SWEN_Delonix_Regia_HMS.managers
 
             conn.Close();
         }
+
+        public void DeleteAccount(int accountId)
+        {
+            cmd.CommandText = "DELETE FROM Account WHERE accountId=@accountId";
+            cmd.Parameters.AddWithValue("@accountId", accountId);
+
+            cmd.ExecuteNonQuery();
+
+        }
     }
 }
