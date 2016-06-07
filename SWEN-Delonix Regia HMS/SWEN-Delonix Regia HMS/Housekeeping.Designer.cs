@@ -76,9 +76,9 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(77, 4);
+            this.textBox4.Location = new System.Drawing.Point(86, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 20);
+            this.textBox4.Size = new System.Drawing.Size(200, 20);
             this.textBox4.TabIndex = 7;
             // 
             // button3
@@ -123,7 +123,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 150);
+            this.label5.Location = new System.Drawing.Point(2, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 11;
@@ -185,23 +185,23 @@
             // 
             // tbxFirstName
             // 
-            this.tbxFirstName.Location = new System.Drawing.Point(77, 34);
+            this.tbxFirstName.Location = new System.Drawing.Point(86, 34);
             this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(209, 20);
+            this.tbxFirstName.Size = new System.Drawing.Size(200, 20);
             this.tbxFirstName.TabIndex = 21;
             // 
             // tbxLastName
             // 
-            this.tbxLastName.Location = new System.Drawing.Point(82, 71);
+            this.tbxLastName.Location = new System.Drawing.Point(86, 71);
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(204, 20);
+            this.tbxLastName.Size = new System.Drawing.Size(200, 20);
             this.tbxLastName.TabIndex = 23;
             // 
             // tbxBankAcc
             // 
-            this.tbxBankAcc.Location = new System.Drawing.Point(103, 145);
+            this.tbxBankAcc.Location = new System.Drawing.Point(86, 145);
             this.tbxBankAcc.Name = "tbxBankAcc";
-            this.tbxBankAcc.Size = new System.Drawing.Size(183, 20);
+            this.tbxBankAcc.Size = new System.Drawing.Size(200, 20);
             this.tbxBankAcc.TabIndex = 24;
             // 
             // tbxStaffAdd
