@@ -132,7 +132,7 @@
         #endregion
 
         private JunJieDBDataSet JunJieDBDataSet;
-        private System.Windows.Forms.BindingSource JunJieDBDataSetBindingSource;
+        private System.Windows.Forms.BindingSource JunJieDBDataSetBindingSource; //test
         private System.Windows.Forms.DataGridView dataGridView1;
         private JunJieDBDataSet JunJieDBDataSet2;
         private System.Windows.Forms.BindingSource accountBindingSource;
