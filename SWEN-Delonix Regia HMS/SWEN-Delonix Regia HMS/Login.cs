@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Done by Jun Jie
+
 namespace SWEN_Delonix_Regia_HMS
 {
     public partial class Login : Form
